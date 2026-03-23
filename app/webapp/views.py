@@ -7,3 +7,7 @@ def welcome(request):
 
 def product(request):
     return render(request, "product.html")
+
+
+def contacts(request):
+    return render(request, "contacts.html")
