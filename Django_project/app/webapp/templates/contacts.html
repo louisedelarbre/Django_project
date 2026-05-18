@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}">
+</head>
+
+<body>
+
+<div class="product-card">
+
+    <h1>Contact Us</h1>
+
+    <p><strong>Name:</strong> John Doe</p>
+
+    <p><strong>Email:</strong> john@example.com</p>
+
+    <p><strong>Phone:</strong> +32 123 45 67 89</p>
+
+    <p>
+        Feel free to reach out for any questions, collaborations,
+        or just to say hello 👋
+    </p>
+
+    <br>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <p>
+            <input type="text" name="name" placeholder="Your Name" required style="padding:10px; width:90%;">
+        </p>
+
+        <p>
+            <input type="email" name="email" placeholder="Your Email" required style="padding:10px; width:90%;">
+        </p>
+
+        <p>
+            <textarea name="message" placeholder="Your Message" required style="padding:10px; width:90%; height:100px;"></textarea>
+        </p>
+
+        <button type="submit" class="button">Send Message</button>
+    </form>
+
+</div>
+
+</body>
+</html>
